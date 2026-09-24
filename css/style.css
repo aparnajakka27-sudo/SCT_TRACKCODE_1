@@ -620,9 +620,9 @@ h1, h2, h3, h4, h5, h6 {
     .hero-subtitle { margin-inline: auto; }
     .hero-cta-group { justify-content: center; }
     
-    .ui-mockup-float { animation: none; } /* Disable float on mobile to save battery */
-    .ui-mockup { transform: none; margin: 0 auto; max-width: 100%; height: 400px; }
-    .ui-mockup:hover { transform: none; box-shadow: var(--shadow-lg); }
+    /* Mobile animations re-enabled */ /* Disable float on mobile to save battery */
+    .ui-mockup { margin: 0 auto; max-width: 100%; height: 400px; transform: perspective(1000px) rotateX(2deg) rotateY(-5deg) rotateZ(1deg); }
+    .ui-mockup:active { transform: perspective(1000px) rotateX(0) rotateY(0) rotateZ(0) scale(1.02); box-shadow: var(--shadow-float); }
     
     .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
     .bento-large { grid-column: span 1; grid-template-columns: 1fr; }
