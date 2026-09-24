@@ -66,73 +66,76 @@
                                 <div class="mac-controls"><span></span><span></span><span></span></div>
                             </div>
                             <div class="ui-mockup-body">
-                                <aside class="ui-sidebar">
-                                    <div class="ui-nav-item active"></div>
-                                    <div class="ui-nav-item"></div>
-                                    <div class="ui-nav-item"></div>
-                                    <div class="ui-nav-item mt-auto"></div>
-                                </aside>
-                                <div class="ui-main" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; background: var(--surface);">
-                                    <!-- Header -->
-                                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
-                                        <div>
-                                            <h3 style="font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.1rem;">Schedule</h3>
-                                            <p style="font-size: 0.75rem; color: var(--text-tertiary);">Today, October 14</p>
+                                <div style="display: flex; flex-direction: column; width: 100%; height: 100%; background: var(--surface);">
+                                    <!-- Video Player Area -->
+                                    <div style="flex: 1.2; background: #000; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;">
+                                        <!-- Simulated Video Background (Gradient + pattern) -->
+                                        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #1e1b4b, #312e81); opacity: 0.9;"></div>
+                                        <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 50% 50%, rgba(99,102,241,0.25) 0%, transparent 60%);"></div>
+                                        
+                                        <!-- Big Play Button Overlay -->
+                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(99,102,241,0.5);">
+                                            <i class="fa-solid fa-play" style="color: white; font-size: 1.2rem; margin-left: 4px;"></i>
                                         </div>
-                                        <div style="display: flex; background: var(--bg-primary); border-radius: 8px; padding: 0.2rem; border: 1px solid var(--border-color);">
-                                            <div style="padding: 0.3rem 0.8rem; background: var(--surface); border-radius: 6px; font-size: 0.7rem; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">Day</div>
-                                            <div style="padding: 0.3rem 0.8rem; color: var(--text-tertiary); font-size: 0.7rem; font-weight: 600;">Week</div>
+                                
+                                        <!-- Video Controls Bar -->
+                                        <div style="position: relative; z-index: 2; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); padding: 2rem 1.2rem 1rem 1.2rem;">
+                                            <!-- Scrubber -->
+                                            <div style="height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px; margin-bottom: 1rem; display: flex; cursor: pointer;">
+                                                <div style="width: 45%; background: var(--accent-primary); border-radius: 2px; position: relative; box-shadow: 0 0 10px var(--accent-primary);">
+                                                    <div style="position: absolute; right: -5px; top: -4px; width: 12px; height: 12px; background: white; border-radius: 50%;"></div>
+                                                </div>
+                                            </div>
+                                            <!-- Control Icons -->
+                                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                <div style="display: flex; align-items: center; gap: 1.25rem; color: white; font-size: 0.9rem;">
+                                                    <i class="fa-solid fa-pause" style="cursor: pointer;"></i>
+                                                    <i class="fa-solid fa-volume-high" style="cursor: pointer;"></i>
+                                                    <span style="font-family: var(--font-display); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.5px;">18:42 / 45:00</span>
+                                                </div>
+                                                <div style="display: flex; align-items: center; gap: 1.25rem; color: white; font-size: 0.9rem;">
+                                                    <i class="fa-solid fa-closed-captioning" style="cursor: pointer;"></i>
+                                                    <i class="fa-solid fa-gear" style="cursor: pointer;"></i>
+                                                    <i class="fa-solid fa-expand" style="cursor: pointer;"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 
-                                    <!-- Timeline Container -->
-                                    <div style="display: flex; flex-direction: column; gap: 1rem; position: relative; margin-top: 0.5rem; flex: 1;">
-                                        <!-- Timeline Line -->
-                                        <div style="position: absolute; left: 45px; top: 0; bottom: 0; width: 1px; background: var(--border-color); z-index: 1;"></div>
-                                
-                                        <!-- Current Time Indicator -->
-                                        <div style="position: absolute; left: 41px; top: 46%; width: 9px; height: 9px; background: var(--accent-primary); border-radius: 50%; z-index: 2; box-shadow: 0 0 10px var(--accent-primary);"></div>
-                                        <div style="position: absolute; left: 45px; top: 46%; width: 100%; height: 1px; background: var(--accent-primary); z-index: 2; opacity: 0.5;"></div>
-                                
-                                        <!-- Event 1 -->
-                                        <div style="display: flex; gap: 1rem; position: relative; z-index: 3;">
-                                            <div style="width: 40px; text-align: right; font-size: 0.7rem; font-weight: 600; color: var(--text-tertiary); padding-top: 0.2rem;">09:00</div>
-                                            <div style="flex: 1; background: rgba(99, 102, 241, 0.1); border-left: 3px solid var(--accent-primary); padding: 0.8rem; border-radius: 0 8px 8px 0;">
-                                                <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem;">Advanced Mathematics</div>
-                                                <div style="font-size: 0.65rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem;">
-                                                    <span><i class="fa-solid fa-location-dot" style="opacity: 0.7;"></i> Room 302</span>
-                                                    <span><i class="fa-solid fa-user" style="opacity: 0.7;"></i> Prof. Davis</span>
+                                    <!-- Live Q&A Section -->
+                                    <div style="flex: 1; background: var(--bg-primary); padding: 1.25rem; display: flex; flex-direction: column;">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                            <h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;">Live Q&A Chat</h4>
+                                            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: #10B981; font-weight: 700;">
+                                                <div style="width: 6px; height: 6px; background: #10B981; border-radius: 50%; box-shadow: 0 0 8px #10B981;"></div> 124 watching
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Chat Messages -->
+                                        <div style="display: flex; flex-direction: column; gap: 1rem; overflow: hidden; flex: 1;">
+                                            <div style="display: flex; gap: 0.8rem; align-items: flex-start;">
+                                                <img src="https://ui-avatars.com/api/?name=E+R&background=18181B&color=FAFAFA" style="width: 28px; height: 28px; border-radius: 50%;">
+                                                <div>
+                                                    <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 0.15rem;">Elena R.</div>
+                                                    <div style="font-size: 0.8rem; color: var(--text-primary); line-height: 1.4;">Could you re-explain the binary search tree insertion?</div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; gap: 0.8rem; align-items: flex-start;">
+                                                <img src="https://ui-avatars.com/api/?name=M+D&background=4F46E5&color=FAFAFA" style="width: 28px; height: 28px; border-radius: 50%; box-shadow: 0 0 10px rgba(79,70,229,0.3);">
+                                                <div>
+                                                    <div style="font-size: 0.8rem; font-weight: 800; color: var(--accent-primary); margin-bottom: 0.15rem;">Prof. Davis (Host)</div>
+                                                    <div style="font-size: 0.8rem; color: var(--text-primary); line-height: 1.4;">Great question Elena, let's look at the diagram on the next slide.</div>
                                                 </div>
                                             </div>
                                         </div>
-                                
-                                        <!-- Event 2 -->
-                                        <div style="display: flex; gap: 1rem; position: relative; z-index: 3; margin-top: 0.5rem;">
-                                            <div style="width: 40px; text-align: right; font-size: 0.7rem; font-weight: 600; color: var(--accent-primary); padding-top: 0.2rem;">10:30</div>
-                                            <div style="flex: 1; background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10B981; padding: 0.8rem; border-radius: 0 8px 8px 0; border-top: 1px solid rgba(16, 185, 129, 0.05); border-right: 1px solid rgba(16, 185, 129, 0.05); border-bottom: 1px solid rgba(16, 185, 129, 0.05);">
-                                                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                                    <div>
-                                                        <div style="font-size: 0.85rem; font-weight: 700; color: #10B981; margin-bottom: 0.2rem;">Physics Laboratory</div>
-                                                        <div style="font-size: 0.65rem; color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem;">
-                                                            <span><i class="fa-solid fa-flask" style="opacity: 0.7;"></i> Science Wing</span>
-                                                        </div>
-                                                    </div>
-                                                    <div style="background: #10B981; color: #000; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.6rem; font-weight: 800;">IN PROGRESS</div>
-                                                </div>
+                                        
+                                        <!-- Chat Input Placeholder -->
+                                        <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                                            <div style="background: var(--surface); border: 1px solid var(--border-color); border-radius: 20px; padding: 0.5rem 1rem; display: flex; justify-content: space-between; align-items: center;">
+                                                <span style="font-size: 0.75rem; color: var(--text-tertiary); font-weight: 500;">Type a question...</span>
+                                                <i class="fa-solid fa-paper-plane" style="color: var(--accent-primary); font-size: 0.8rem;"></i>
                                             </div>
                                         </div>
-                                
-                                        <!-- Event 3 -->
-                                        <div style="display: flex; gap: 1rem; position: relative; z-index: 3; margin-top: 0.5rem; opacity: 0.6;">
-                                            <div style="width: 40px; text-align: right; font-size: 0.7rem; font-weight: 600; color: var(--text-tertiary); padding-top: 0.2rem;">13:00</div>
-                                            <div style="flex: 1; background: var(--bg-primary); border-left: 3px solid var(--border-color); padding: 0.8rem; border-radius: 0 8px 8px 0;">
-                                                <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 0.2rem;">Study Group</div>
-                                                <div style="font-size: 0.65rem; color: var(--text-tertiary); display: flex; align-items: center; gap: 0.5rem;">
-                                                    <span><i class="fa-solid fa-mug-hot" style="opacity: 0.7;"></i> Library Cafe</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
                                     </div>
                                 </div>
                             </div>
