@@ -2,24 +2,24 @@
    PREMIUM DESIGN SYSTEM & VARIABLES
 ================================================== */
 :root {
-    /* Premium SaaS EdTech Palette */
-    --bg-primary: #F7F5F0;
-    --bg-secondary: #EFECE3;
+    /* Custom Cream & Navy Blue Palette */
+    --bg-primary: #F8F0E5;
+    --bg-secondary: #F0E6D8;
     --surface: #FFFFFF;
     
-    --text-primary: #17211B;
-    --text-secondary: #315C4A;
-    --text-tertiary: #68716B;
+    --text-primary: #082052;
+    --text-secondary: #1E3A70;
+    --text-tertiary: #4A608B;
     
-    --accent-primary: #315C4A;
-    --accent-hover: #17211B;
-    --accent-light: rgba(49, 92, 74, 0.1);
+    --accent-primary: #082052;
+    --accent-hover: #05163A;
+    --accent-light: rgba(8, 32, 82, 0.1);
     
-    --accent-gold: #D9A441;
-    --accent-gold-hover: #B88931;
+    --accent-gold: #3B82F6; /* Use bright blue instead of gold for accents */
+    --accent-gold-hover: #2563EB;
     
-    --border-color: #E2DFD6;
-    --border-hover: #D2CFD6;
+    --border-color: #E8DCCB;
+    --border-hover: #D8CBB5;
 }
 
 /* Override Dark Mode to use Forest Green/Charcoal */
@@ -279,17 +279,9 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1; filter: blur(50px);
 }
 
-.ui-mockup {
-    background: var(--surface); border-radius: 16px;
-    box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,0.15);
-    overflow: hidden; display: flex; flex-direction: column;
-    height: 520px; 
-    transform: perspective(1200px) rotateY(-10deg) rotateX(4deg) scale(0.95);
-    transition: var(--transition);
-    transform-origin: center right;
-}
+.ui-mockup { background: var(--surface); border-radius: 16px; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color); overflow: hidden; display: flex; flex-direction: column; transform: none; transition: transform 0.3s ease; }
 .ui-mockup:hover { 
-    transform: perspective(1200px) rotateY(0deg) rotateX(0deg) scale(1.02); 
+    transform: none; 
     box-shadow: var(--shadow-float);
 }
 
@@ -624,8 +616,8 @@ h1, h2, h3, h4, h5, h6 {
     .hero-cta-group { justify-content: center; }
     
     /* Mobile animations re-enabled */ /* Disable float on mobile to save battery */
-    .ui-mockup { margin: 0 auto; max-width: 100%; height: 400px; transform: perspective(1000px) rotateX(2deg) rotateY(-5deg) rotateZ(1deg); }
-    .ui-mockup:active { transform: perspective(1000px) rotateX(0) rotateY(0) rotateZ(0) scale(1.02); box-shadow: var(--shadow-float); }
+    .ui-mockup { background: var(--surface); border-radius: 16px; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color); overflow: hidden; display: flex; flex-direction: column; transform: none; transition: transform 0.3s ease; }
+    .ui-mockup:active { transform: none; box-shadow: var(--shadow-float); }
     
     .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
     .bento-large { grid-column: span 1; grid-template-columns: 1fr; }
@@ -654,7 +646,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .ui-sidebar { display: none; }
     .ui-kpis { grid-template-columns: 1fr; }
-    .ui-mockup { height: 350px; }
+    .ui-mockup { background: var(--surface); border-radius: 16px; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color); overflow: hidden; display: flex; flex-direction: column; transform: none; transition: transform 0.3s ease; }
     
     /* Typography Scaling for Mobile */
     .hero-title { font-size: clamp(3rem, 10vw, 4rem); }
@@ -787,4 +779,5 @@ h1, h2, h3, h4, h5, h6 {
 .search-results-item:hover { background: var(--bg-secondary); }
 .sr-title { font-size: 0.8rem; font-weight: 700; color: var(--text-primary); }
 .sr-desc { font-size: 0.65rem; color: var(--text-tertiary); }
+
 
