@@ -73,7 +73,7 @@
                                     <div class="ui-nav-item"></div>
                                     <div class="ui-nav-item mt-auto"></div>
                                 </aside>
-                                <div class="ui-main" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem;">
+                                <div class="ui-main" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; overflow: hidden;">
                                     <!-- Top Bar -->
                                     <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
                                         <div style="display: flex; align-items: center; gap: 0.8rem;">
@@ -95,7 +95,7 @@
                                     </div>
                                 
                                     <!-- Charts Row -->
-                                    <div style="display: flex; gap: 1rem; height: 130px;">
+                                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                                         <!-- Area Chart (Engagement) -->
                                         <div style="flex: 2; background: var(--bg-primary); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-color); display: flex; flex-direction: column; position: relative; overflow: hidden;">
                                             <div style="display: flex; justify-content: space-between; align-items: flex-start; z-index: 2;">
@@ -195,7 +195,7 @@
         <section class="section" style="padding: 3rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); background: var(--bg-secondary);">
             <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; opacity: 0.6;">
                 <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: var(--text-primary); text-transform: uppercase;">Built for the people who keep a campus moving</div>
-                <div style="display: flex; gap: 3rem; font-weight: 600; font-size: 0.9rem; color: var(--text-secondary);">
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; font-weight: 600; font-size: 0.9rem; color: var(--text-secondary);">
                     <span>ADMINISTRATION</span>
                     <span>TEACHERS</span>
                     <span>STUDENTS</span>
@@ -580,6 +580,7 @@
     <script type="module" src="./js/script.js"></script>
 </body>
 </html>
+
 
 
 
