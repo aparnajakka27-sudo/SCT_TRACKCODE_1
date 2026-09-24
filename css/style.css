@@ -214,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--text-primary); color: var(--surface);
     border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.btn-nav:hover { background: #000; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+.btn-nav:hover { background: var(--accent-primary); color: #FFFFFF; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
 
 /* Hamburger */
 .hamburger {
