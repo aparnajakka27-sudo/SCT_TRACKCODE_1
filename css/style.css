@@ -2,24 +2,23 @@
    PREMIUM DESIGN SYSTEM & VARIABLES
 ================================================== */
 :root {
-    /* Dark Mode - Premium Tech Aesthetic */
-    --bg-primary: #09090B;       /* Zinc 950 */
-    --bg-secondary: #18181B;     /* Zinc 900 */
-    --surface: #121214;          /* Slightly lighter than bg */
+    /* Silicon Valley Green - Clean SaaS Aesthetic */
+    --bg-primary: #F9FAFB;
+    --bg-secondary: #F3F4F6;
+    --surface: #FFFFFF;
     
-    --text-primary: #FAFAFA;     /* Stark white */
-    --text-secondary: #A1A1AA;   /* Zinc 400 */
-    --text-tertiary: #52525B;    /* Zinc 600 */
+    --text-primary: #0F1712;
+    --text-secondary: #374151;
+    --text-tertiary: #6B7280;
     
-    --accent-primary: #6366F1;   /* Electric Indigo */
-    --accent-hover: #4F46E5;
-    --accent-light: rgba(99, 102, 241, 0.15);
+    --accent-primary: #10B981;
+    --accent-hover: #059669;
+    --accent-light: rgba(16, 185, 129, 0.1);
     
-    --accent-secondary: #22D3EE; /* Neon Cyan */
+    --accent-secondary: #34D399;
     
-    /* UI Colors */
-    --border-color: #27272A;     /* Zinc 800 */
-    --border-hover: #3F3F46;     /* Zinc 700 */
+    --border-color: #E5E7EB;
+    --border-hover: #D1D5DB;     /* Zinc 700 */
     --success: #10B981;
     --error: #EF4444;
     
@@ -703,3 +702,5 @@ h1, h2, h3, h4, h5, h6 {
 
 .ai-node-data-title { font-size: 0.85rem; font-weight: 700; color: #FAFAFA; }
 .ai-node-data-subtitle { font-size: 0.65rem; color: var(--text-tertiary); }
+
+
