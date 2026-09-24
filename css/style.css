@@ -640,3 +640,37 @@ h1, h2, h3, h4, h5, h6 {
     .footer-nav { flex-direction: column; gap: 3rem; }
     .footer-bottom { flex-direction: column; gap: 1.5rem; text-align: center; }
 }
+
+@media (max-width: 768px) {
+    /* Responsive Dashboard UI Mockups */
+    .detailed-dashboard { height: auto; min-height: 400px; }
+    .dd-sidebar { display: none; }
+    .dd-grid { grid-template-columns: 1fr; }
+    .dd-content { padding: 1.5rem; }
+    .dd-header { padding: 0 1.5rem; }
+    
+    .ui-sidebar { display: none; }
+    .ui-kpis { grid-template-columns: 1fr; }
+    .ui-mockup { height: auto; min-height: 300px; }
+    
+    /* Typography Scaling for Mobile */
+    .hero-title { font-size: clamp(3rem, 10vw, 4rem); }
+    .section-title { font-size: clamp(2rem, 8vw, 3rem); }
+    
+    /* Bento Grid refinements */
+    .bento-large .bento-content { padding: 1.5rem; }
+    .bento-visual { padding: 1.5rem; }
+    
+    /* Contact Section refinements */
+    .contact-box { padding: 2rem 1.5rem; gap: 3rem; }
+    .contact-form-wrapper { padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-cta-group { flex-direction: column; width: 100%; }
+    .hero-cta-group .btn { width: 100%; justify-content: center; }
+    
+    .dd-search-bar { width: 100%; }
+    .value-props { flex-direction: column; gap: 1.5rem; }
+}
+
