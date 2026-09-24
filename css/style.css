@@ -512,12 +512,12 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-float); color: var(--text-primary);
 }
 
-.contact-text .section-title { color: #FFFFFF; margin-bottom: 1.5rem; font-size: clamp(2.5rem, 4vw, 3rem); }
-.contact-text p { color: rgba(255,255,255,0.8); font-size: 1.25rem; margin-bottom: 3rem; line-height: 1.6; }
+.contact-text .section-title { color: var(--text-primary); margin-bottom: 1.5rem; font-size: clamp(2.5rem, 4vw, 3rem); }
+.contact-text p { color: var(--text-tertiary); font-size: 1.25rem; margin-bottom: 3rem; line-height: 1.6; }
 
 .contact-features { display: flex; flex-direction: column; gap: 1.25rem; }
-.cf-item { display: flex; gap: 1rem; align-items: center; color: rgba(255,255,255,0.95); font-size: 1.05rem; font-weight: 500; }
-.cf-item i { color: var(--accent-secondary); font-size: 1.25rem; }
+.cf-item { display: flex; gap: 1rem; align-items: center; color: var(--text-secondary); font-size: 1.05rem; font-weight: 500; }
+.cf-item i { color: var(--accent-gold); font-size: 1.25rem; }
 
 .contact-form-wrapper { background: var(--surface); padding: 3rem; border-radius: 24px; color: var(--text-primary); box-shadow: var(--shadow-lg); }
 
@@ -779,5 +779,6 @@ h1, h2, h3, h4, h5, h6 {
 .search-results-item:hover { background: var(--bg-secondary); }
 .sr-title { font-size: 0.8rem; font-weight: 700; color: var(--text-primary); }
 .sr-desc { font-size: 0.65rem; color: var(--text-tertiary); }
+
 
 
