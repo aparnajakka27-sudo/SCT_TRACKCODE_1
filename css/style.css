@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Dashboard Mockup (High-End UI Representation) */
 .hero-visual { position: relative; }
-.hero-glow {
+.hero-glow { display: none;
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
     width: 90%; height: 90%; background: radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, rgba(247, 245, 240, 0) 70%);
     z-index: 1; filter: blur(50px);
@@ -702,6 +702,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ai-node-data-title { font-size: 0.85rem; font-weight: 700; color: #FAFAFA; }
 .ai-node-data-subtitle { font-size: 0.65rem; color: var(--text-tertiary); }
+
 
 
 
