@@ -700,3 +700,71 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
+/* ==================================================
+   DARK MODE & SCROLL PROGRESS
+================================================== */
+[data-theme="dark"] {
+    --bg-primary: #082052;
+    --bg-secondary: #05163A;
+    --surface: #0A2B6E;
+    --text-primary: #F8F0E5;
+    --text-secondary: #D8CBB5;
+    --text-tertiary: #A6B4CC;
+    --accent-primary: #F8F0E5;
+    --accent-hover: #FFFFFF;
+    --accent-light: rgba(248, 240, 229, 0.1);
+    --border-color: rgba(248, 240, 229, 0.15);
+    --border-hover: rgba(248, 240, 229, 0.3);
+}
+[data-theme="dark"] .navbar.scrolled {
+    background: rgba(8, 32, 82, 0.95);
+}
+[data-theme="dark"] .btn-primary { color: #082052; }
+[data-theme="dark"] .btn-nav { color: #082052; }
+[data-theme="dark"] .btn-nav:hover { background: #05163A; color: #F8F0E5; }
+
+.scroll-progress-bar {
+    position: fixed; top: 0; left: 0; height: 3px; background: var(--accent-secondary);
+    z-index: 10000; width: 0%; transform-origin: left; transition: width 0.1s ease-out;
+}
+
+.theme-toggle {
+    background: transparent; border: none; color: var(--text-primary); font-size: 1.25rem;
+    cursor: pointer; padding: 0.5rem; transition: transform 0.3s;
+}
+.theme-toggle:hover { transform: scale(1.1) rotate(15deg); }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==================================================
+   ACTION SECTION & TABS
+================================================== */
+.action-tabs { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
+.action-tab {
+    padding: 0.75rem 2rem; border: none; background: var(--bg-primary); border-radius: 30px;
+    font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s ease;
+    box-shadow: inset 0 0 0 1px var(--border-color);
+}
+.action-tab:hover { background: var(--bg-secondary); color: var(--text-primary); }
+.action-tab.active { background: var(--accent-primary); color: #FFF; box-shadow: 0 4px 15px var(--accent-light); }
+
+.action-view { padding: 2rem; background: var(--surface); flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 1.5rem; }
+.av-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+@media(max-width: 768px) { .av-grid { grid-template-columns: 1fr; } }
+.av-card { padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 12px; background: var(--bg-primary); transition: transform 0.2s; }
+.av-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); }
+.av-card-title { font-size: 0.8rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; }
+.av-card-value { font-size: 1.8rem; font-family: var(--font-display); font-weight: 800; color: var(--text-primary); }
+
+.search-results-item { padding: 0.5rem; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
+.search-results-item:hover { background: var(--bg-secondary); }
+.sr-title { font-size: 0.8rem; font-weight: 700; color: var(--text-primary); }
+.sr-desc { font-size: 0.65rem; color: var(--text-tertiary); }

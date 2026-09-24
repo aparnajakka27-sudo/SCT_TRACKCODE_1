@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
 
     <!-- Navigation (CRITICAL TASK REQUIREMENT) -->
     <nav class="navbar" id="navbar">
@@ -84,8 +85,12 @@
                                                 <p style="font-size: 0.7rem; color: var(--text-tertiary);">Real-time metrics</p>
                                             </div>
                                         </div>
-                                        <div style="display: flex; gap: 0.5rem;">
-                                            <div style="padding: 0.3rem 0.6rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);">This Week <i class="fa-solid fa-chevron-down" style="margin-left:4px;"></i></div>
+                                                                                <div style="display: flex; gap: 0.5rem; position: relative;">
+                                            <div class="campus-search" style="position: relative;">
+                                                <input type="text" placeholder="Search students, classes..." style="padding: 0.4rem 1rem 0.4rem 2rem; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-primary); font-size: 0.7rem; color: var(--text-primary); width: 180px;">
+                                                <i class="fa-solid fa-search" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 0.7rem; color: var(--text-tertiary);"></i>
+                                                <div class="search-results" style="display: none; position: absolute; top: 110%; right: 0; width: 220px; background: var(--surface); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: var(--shadow-lg); z-index: 50; padding: 0.5rem;"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 
@@ -96,7 +101,7 @@
                                             <div style="display: flex; justify-content: space-between; align-items: flex-start; z-index: 2;">
                                                 <div>
                                                     <div style="font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Engagement</div>
-                                                    <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: #FAFAFA;">+24%</div>
+                                                    <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: #FAFAFA;" class="animate-num" data-val="24" data-format="%">+24%</div>
                                                 </div>
                                                 <div style="color: #10B981; font-size: 0.75rem; font-weight: 700;"><i class="fa-solid fa-arrow-trend-up"></i> High</div>
                                             </div>
@@ -157,6 +162,34 @@
             </div>
         </header>
 
+        <!-- SEE CAMPUSFLOW IN ACTION -->
+        <section class="section action-section" id="action">
+            <div class="container">
+                <div class="section-header text-center fade-up">
+                    <h2 class="section-title">See CampusFlow in Action</h2>
+                    <p class="section-subtitle">Experience how the interface dynamically adapts for every role on campus.</p>
+                </div>
+                
+                <div class="action-tabs fade-up delay-1">
+                    <button class="action-tab active" data-role="admin">Admin</button>
+                    <button class="action-tab" data-role="teacher">Teacher</button>
+                    <button class="action-tab" data-role="student">Student</button>
+                </div>
+                
+                <div class="action-preview-container fade-up delay-2">
+                    <div class="ui-mockup" style="height: 450px;">
+                        <div class="ui-mockup-header" style="justify-content: flex-start; background: var(--bg-secondary);">
+                            <div class="mac-controls"><span></span><span></span><span></span></div>
+                            <div style="margin-left: 20px; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary);" id="actionRoleTitle">Administrator Dashboard</div>
+                        </div>
+                        <div class="ui-mockup-body action-view" id="actionView">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Features Bento Grid -->
         <section class="section features-section bg-surface" id="features">
             <div class="container">
@@ -508,3 +541,7 @@
     <script type="module" src="./js/script.js"></script>
 </body>
 </html>
+
+
+
+
