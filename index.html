@@ -66,21 +66,21 @@
                                 <div class="mac-controls"><span></span><span></span><span></span></div>
                             </div>
                             <div class="ui-mockup-body" style="background: var(--bg-primary);">
-                                <div class="ui-main" style="padding: 0; display: flex; flex-direction: column; position: relative; overflow: hidden; height: 100%; width: 100%;">
+                                <div class="ui-main ai-graph-container">
                                     <!-- Background Grid -->
-                                    <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px; z-index: 0;"></div>
+                                    <div class="ai-graph-bg"></div>
                                     
                                     <!-- Title / AI Status Overlay -->
-                                    <div style="position: absolute; top: 1.5rem; left: 1.5rem; z-index: 10; display: flex; align-items: center; gap: 0.8rem; background: rgba(9, 9, 11, 0.7); backdrop-filter: blur(8px); padding: 0.8rem 1.2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
-                                        <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-secondary); box-shadow: 0 0 10px var(--accent-secondary);"></div>
+                                    <div class="ai-status-overlay">
+                                        <div class="ai-status-dot"></div>
                                         <div>
-                                            <div style="font-family: var(--font-display); font-weight: 700; color: #FAFAFA; font-size: 0.9rem; letter-spacing: 0.5px;">CampusFlow Core</div>
-                                            <div style="font-size: 0.65rem; color: var(--accent-secondary); text-transform: uppercase; font-weight: 600; margin-top: 2px;">Ecosystem Synced</div>
+                                            <div class="ai-status-title">CampusFlow Core</div>
+                                            <div class="ai-status-subtitle">Ecosystem Synced</div>
                                         </div>
                                     </div>
                                 
                                     <!-- The Graph / Nodes -->
-                                    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1;">
+                                    <svg class="ai-graph-svg">
                                         <!-- Lines connecting nodes -->
                                         <line x1="50%" y1="50%" x2="25%" y2="25%" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-dasharray="4 4" />
                                         <line x1="50%" y1="50%" x2="75%" y2="30%" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
@@ -105,53 +105,52 @@
                                         </circle>
                                     </svg>
                                 
-                                    <!-- Floating Node Elements (z-index 5) -->
                                     <!-- Central Hub -->
-                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 5; background: var(--accent-primary); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(99, 102, 241, 0.4); border: 2px solid rgba(255,255,255,0.1);">
-                                        <i class="fa-solid fa-network-wired" style="color: white; font-size: 1.8rem;"></i>
+                                    <div class="ai-node-hub">
+                                        <i class="fa-solid fa-network-wired"></i>
                                     </div>
                                     
                                     <!-- Node 1: Students -->
-                                    <div style="position: absolute; top: 25%; left: 25%; transform: translate(-50%, -50%); z-index: 5; background: var(--surface); padding: 0.6rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 0.8rem; box-shadow: var(--shadow-sm);">
-                                        <div style="width: 32px; height: 32px; background: rgba(16,185,129,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #10B981;">
+                                    <div class="ai-node ai-node-1">
+                                        <div class="ai-node-icon students">
                                             <i class="fa-solid fa-users"></i>
                                         </div>
                                         <div>
-                                            <div style="font-size: 0.85rem; font-weight: 700; color: #FAFAFA;">12,402</div>
-                                            <div style="font-size: 0.65rem; color: var(--text-tertiary);">Active Students</div>
+                                            <div class="ai-node-data-title">12,402</div>
+                                            <div class="ai-node-data-subtitle">Active Students</div>
                                         </div>
                                     </div>
                                 
                                     <!-- Node 2: Faculty -->
-                                    <div style="position: absolute; top: 30%; left: 75%; transform: translate(-50%, -50%); z-index: 5; background: var(--surface); padding: 0.6rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 0.8rem; box-shadow: var(--shadow-sm);">
-                                        <div style="width: 32px; height: 32px; background: rgba(59,130,246,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #3B82F6;">
+                                    <div class="ai-node ai-node-2">
+                                        <div class="ai-node-icon faculty">
                                             <i class="fa-solid fa-chalkboard-user"></i>
                                         </div>
                                         <div>
-                                            <div style="font-size: 0.85rem; font-weight: 700; color: #FAFAFA;">845</div>
-                                            <div style="font-size: 0.65rem; color: var(--text-tertiary);">Faculty Sync</div>
+                                            <div class="ai-node-data-title">845</div>
+                                            <div class="ai-node-data-subtitle">Faculty Sync</div>
                                         </div>
                                     </div>
                                 
                                     <!-- Node 3: Curriculum -->
-                                    <div style="position: absolute; top: 75%; left: 30%; transform: translate(-50%, -50%); z-index: 5; background: var(--surface); padding: 0.6rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 0.8rem; box-shadow: var(--shadow-sm);">
-                                        <div style="width: 32px; height: 32px; background: rgba(245,158,11,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #F59E0B;">
+                                    <div class="ai-node ai-node-3">
+                                        <div class="ai-node-icon curriculum">
                                             <i class="fa-solid fa-book"></i>
                                         </div>
                                         <div>
-                                            <div style="font-size: 0.85rem; font-weight: 700; color: #FAFAFA;">99.8%</div>
-                                            <div style="font-size: 0.65rem; color: var(--text-tertiary);">Course Uptime</div>
+                                            <div class="ai-node-data-title">99.8%</div>
+                                            <div class="ai-node-data-subtitle">Course Uptime</div>
                                         </div>
                                     </div>
                                 
                                     <!-- Node 4: Infrastructure -->
-                                    <div style="position: absolute; top: 80%; left: 75%; transform: translate(-50%, -50%); z-index: 5; background: var(--surface); padding: 0.6rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 0.8rem; box-shadow: var(--shadow-sm);">
-                                        <div style="width: 32px; height: 32px; background: rgba(236,72,153,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #EC4899;">
+                                    <div class="ai-node ai-node-4">
+                                        <div class="ai-node-icon infrastructure">
                                             <i class="fa-solid fa-shield-halved"></i>
                                         </div>
                                         <div>
-                                            <div style="font-size: 0.85rem; font-weight: 700; color: #FAFAFA;">Secure</div>
-                                            <div style="font-size: 0.65rem; color: var(--text-tertiary);">Zero Trust Grid</div>
+                                            <div class="ai-node-data-title">Secure</div>
+                                            <div class="ai-node-data-subtitle">Zero Trust Grid</div>
                                         </div>
                                     </div>
                                 </div>
