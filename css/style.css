@@ -2,23 +2,23 @@
    PREMIUM DESIGN SYSTEM & VARIABLES
 ================================================== */
 :root {
-    /* Custom Oat & Charcoal Palette (#2A2529 and #F3F0E7) */
-    --bg-primary: #F3F0E7;
-    --bg-secondary: #EBE6DA;
-    --surface: #FFFFFF;
+    /* Custom Deep Pine & Gold Palette (#003631 and #FFEDA8) */
+    --bg-primary: #003631;
+    --bg-secondary: #002D29;
+    --surface: #00453F;
     
-    --text-primary: #2A2529;
-    --text-secondary: #4A4549;
-    --text-tertiary: #7A7579;
+    --text-primary: #FFFFFF;
+    --text-secondary: #FFEDA8;
+    --text-tertiary: rgba(255, 255, 255, 0.6);
     
-    --accent-primary: #2A2529;
-    --accent-hover: #1A1519;
-    --accent-light: rgba(42, 37, 41, 0.1);
+    --accent-primary: #FFEDA8;
+    --accent-hover: #E6D597;
+    --accent-light: rgba(255, 237, 168, 0.15);
     
-    --accent-secondary: #D4AF37; /* Optional elegant gold highlight */
+    --accent-secondary: #FFEDA8;
     
-    --border-color: #E2DFD6;
-    --border-hover: #D2CFD6;     /* Zinc 700 */
+    --border-color: rgba(255, 237, 168, 0.15);
+    --border-hover: rgba(255, 237, 168, 0.3);     /* Zinc 700 */
     --success: #10B981;
     --error: #EF4444;
     
@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid transparent;
 }
 
-.navbar.scrolled { background: rgba(243, 240, 231, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); }
+.navbar.scrolled { background: rgba(0, 54, 49, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); }
 
 .nav-container {
     max-width: 1280px; margin: 0 auto; padding: 0 2rem;
@@ -206,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--text-primary); color: var(--surface);
     border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.btn-nav:hover { background: var(--text-primary); color: #F3F0E7; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+.btn-nav:hover { background: #FFFFFF; color: #003631; }
 
 /* Hamburger */
 .hamburger {
@@ -590,7 +590,7 @@ h1, h2, h3, h4, h5, h6 {
     .section { padding: 6rem 0; }
     
     /* Navigation adjustments */
-    .nav-actions .btn-nav { display: none; }
+    .nav-actions .btn-nav { padding: 0.75rem 1.5rem; font-size: 0.95rem; background: var(--accent-primary); color: #003631; border-radius: 8px; font-weight: 700; }
     .hamburger { display: block; }
     
     .hamburger.active span:nth-child(1) { top: 10px; transform: rotate(45deg); }
@@ -695,6 +695,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ai-node-data-title { font-size: 0.85rem; font-weight: 700; color: #FAFAFA; }
 .ai-node-data-subtitle { font-size: 0.65rem; color: var(--text-tertiary); }
+
 
 
 
