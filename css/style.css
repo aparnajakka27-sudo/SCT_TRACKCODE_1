@@ -2,23 +2,23 @@
    PREMIUM DESIGN SYSTEM & VARIABLES
 ================================================== */
 :root {
-    /* Earthy & Organic - Premium Lifestyle/Modern Aesthetic */
-    --bg-primary: #FDFBF7;
-    --bg-secondary: #F3EFE6;
+    /* Custom Cream & Navy Blue Palette */
+    --bg-primary: #F8F0E5;
+    --bg-secondary: #F0E6D8;
     --surface: #FFFFFF;
     
-    --text-primary: #2C2621;
-    --text-secondary: #5C554D;
-    --text-tertiary: #8C857D;
+    --text-primary: #082052;
+    --text-secondary: #1E3A70;
+    --text-tertiary: #4A608B;
     
-    --accent-primary: #597A61;
-    --accent-hover: #45604C;
-    --accent-light: rgba(89, 122, 97, 0.1);
+    --accent-primary: #082052;
+    --accent-hover: #05163A;
+    --accent-light: rgba(8, 32, 82, 0.1);
     
-    --accent-secondary: #A67C52;
+    --accent-secondary: #3B82F6; /* Optional pop of bright blue */
     
-    --border-color: #E6DFD3;
-    --border-hover: #D6CBB9;     /* Zinc 700 */
+    --border-color: #E8DCCB;
+    --border-hover: #D8CBB5;     /* Zinc 700 */
     --success: #10B981;
     --error: #EF4444;
     
@@ -213,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--text-primary); color: var(--surface);
     border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.btn-nav:hover { background: var(--accent-primary); color: #FFFFFF; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+.btn-nav:hover { background: var(--text-primary); color: #F8F0E5; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
 
 /* Hamburger */
 .hamburger {
@@ -702,6 +702,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ai-node-data-title { font-size: 0.85rem; font-weight: 700; color: #FAFAFA; }
 .ai-node-data-subtitle { font-size: 0.65rem; color: var(--text-tertiary); }
+
 
 
 
