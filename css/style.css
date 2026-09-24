@@ -2,23 +2,23 @@
    PREMIUM DESIGN SYSTEM & VARIABLES
 ================================================== */
 :root {
-    /* Custom Lavender Blush & Claret Palette */
-    --bg-primary: #FFF0F5;
-    --bg-secondary: #FCE6EE;
+    /* Custom Vanilla & Moonstone Palette */
+    --bg-primary: #FDF8EB;
+    --bg-secondary: #F3E5AB;
     --surface: #FFFFFF;
     
-    --text-primary: #7F1734;
-    --text-secondary: #9E3554;
-    --text-tertiary: #B06981;
+    --text-primary: #1A5463;
+    --text-secondary: #3AA8C1;
+    --text-tertiary: #6BAEB7;
     
-    --accent-primary: #7F1734;
-    --accent-hover: #5E0E24;
-    --accent-light: rgba(127, 23, 52, 0.1);
+    --accent-primary: #3AA8C1;
+    --accent-hover: #2E8A9E;
+    --accent-light: rgba(58, 168, 193, 0.15);
     
-    --accent-secondary: #C73E6D; 
+    --accent-secondary: #24819B; 
     
-    --border-color: #F0D5DF;
-    --border-hover: #E8C1CF;     /* Zinc 700 */
+    --border-color: #E8DCCB;
+    --border-hover: #D8CBB5;     /* Zinc 700 */
     --success: #10B981;
     --error: #EF4444;
     
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid transparent;
 }
 
-.navbar.scrolled { background: rgba(255, 240, 245, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); }
+.navbar.scrolled { background: rgba(253, 248, 235, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); }
 
 .nav-container {
     max-width: 1280px; margin: 0 auto; padding: 0 2rem;
@@ -687,6 +687,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ai-node-data-title { font-size: 0.85rem; font-weight: 700; color: #FAFAFA; }
 .ai-node-data-subtitle { font-size: 0.65rem; color: var(--text-tertiary); }
+
 
 
 
