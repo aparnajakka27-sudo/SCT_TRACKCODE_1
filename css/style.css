@@ -2,23 +2,42 @@
    PREMIUM DESIGN SYSTEM & VARIABLES
 ================================================== */
 :root {
-    /* Custom Cream & Navy Blue Palette */
-    --bg-primary: #F8F0E5;
-    --bg-secondary: #F0E6D8;
+    /* Premium SaaS EdTech Palette */
+    --bg-primary: #F7F5F0;
+    --bg-secondary: #EFECE3;
     --surface: #FFFFFF;
     
-    --text-primary: #082052;
-    --text-secondary: #1E3A70;
-    --text-tertiary: #4A608B;
+    --text-primary: #17211B;
+    --text-secondary: #315C4A;
+    --text-tertiary: #68716B;
     
-    --accent-primary: #082052;
-    --accent-hover: #05163A;
-    --accent-light: rgba(8, 32, 82, 0.1);
+    --accent-primary: #315C4A;
+    --accent-hover: #17211B;
+    --accent-light: rgba(49, 92, 74, 0.1);
     
-    --accent-secondary: #3B82F6;
+    --accent-gold: #D9A441;
+    --accent-gold-hover: #B88931;
     
-    --border-color: #E8DCCB;
-    --border-hover: #D8CBB5;     /* Zinc 700 */
+    --border-color: #E2DFD6;
+    --border-hover: #D2CFD6;
+}
+
+/* Override Dark Mode to use Forest Green/Charcoal */
+[data-theme="dark"] {
+    --bg-primary: #17211B;
+    --bg-secondary: #223028;
+    --surface: #1E2B23;
+    --text-primary: #F7F5F0;
+    --text-secondary: #EFECE3;
+    --text-tertiary: #9AA19D;
+    --accent-primary: #D9A441;
+    --accent-hover: #F7C05C;
+    --accent-light: rgba(217, 164, 65, 0.1);
+    --border-color: rgba(247, 245, 240, 0.1);
+}
+[data-theme="dark"] .navbar.scrolled {
+    background: rgba(23, 33, 27, 0.95);
+}     /* Zinc 700 */
     --success: #10B981;
     --error: #EF4444;
     
@@ -115,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-large { padding: 1.125rem 2.5rem; font-size: 1.05rem; }
 
-.btn-primary { background: var(--accent-primary); color: #FFFFFF; font-weight: 700; }
+.btn-primary { background: var(--accent-primary); color: #FFF; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; transition: all 0.3s; }
 
 .btn-primary:hover {
     background: var(--accent-hover);
@@ -197,8 +216,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-actions { display: flex; align-items: center; gap: 1.25rem; }
 
-.btn-nav { padding: 0.75rem 1.5rem; font-size: 0.95rem; background: var(--accent-primary); color: #FFFFFF; border-radius: 8px; font-weight: 700; }
-.btn-nav:hover { background: #FFFFFF; color: var(--accent-primary); }
+.btn-nav { padding: 0.6rem 1.2rem; font-size: 0.9rem; background: var(--accent-gold); color: #FFF; border-radius: 6px; font-weight: 600; }
+.btn-nav:hover { background: var(--accent-gold-hover); transform: translateY(-2px); }
 
 /* Hamburger */
 .hamburger {
@@ -582,7 +601,7 @@ h1, h2, h3, h4, h5, h6 {
     .section { padding: 6rem 0; }
     
     /* Navigation adjustments */
-    .nav-actions .btn-nav { padding: 0.75rem 1.5rem; font-size: 0.95rem; background: var(--accent-primary); color: #FFFFFF; border-radius: 8px; font-weight: 700; }
+    .nav-actions .btn-nav { padding: 0.6rem 1.2rem; font-size: 0.9rem; background: var(--accent-gold); color: #FFF; border-radius: 6px; font-weight: 600; }
     .hamburger { display: block; }
     
     .hamburger.active span:nth-child(1) { top: 10px; transform: rotate(45deg); }
@@ -720,9 +739,9 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="dark"] .navbar.scrolled {
     background: rgba(8, 32, 82, 0.95);
 }
-[data-theme="dark"] .btn-primary { color: #082052; }
-[data-theme="dark"] .btn-nav { color: #082052; }
-[data-theme="dark"] .btn-nav:hover { background: #05163A; color: #F8F0E5; }
+[data-theme="dark"] .btn-primary { background: var(--accent-primary); color: #FFF; font-weight: 600; padding: 1rem 2rem; border-radius: 8px; transition: all 0.3s; }
+[data-theme="dark"] .btn-nav { padding: 0.6rem 1.2rem; font-size: 0.9rem; background: var(--accent-gold); color: #FFF; border-radius: 6px; font-weight: 600; }
+[data-theme="dark"] .btn-nav:hover { background: var(--accent-gold-hover); transform: translateY(-2px); }
 
 .scroll-progress-bar {
     position: fixed; top: 0; left: 0; height: 3px; background: var(--accent-secondary);
@@ -768,3 +787,4 @@ h1, h2, h3, h4, h5, h6 {
 .search-results-item:hover { background: var(--bg-secondary); }
 .sr-title { font-size: 0.8rem; font-weight: 700; color: var(--text-primary); }
 .sr-desc { font-size: 0.65rem; color: var(--text-tertiary); }
+
