@@ -2,23 +2,23 @@
    PREMIUM DESIGN SYSTEM & VARIABLES
 ================================================== */
 :root {
-    /* Silicon Valley Green - Clean SaaS Aesthetic */
-    --bg-primary: #F9FAFB;
-    --bg-secondary: #F3F4F6;
+    /* Cobalt Blue - Modern Professional SaaS Aesthetic */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8FAFC;
     --surface: #FFFFFF;
     
-    --text-primary: #0F1712;
-    --text-secondary: #374151;
-    --text-tertiary: #6B7280;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-tertiary: #94A3B8;
     
-    --accent-primary: #10B981;
-    --accent-hover: #059669;
-    --accent-light: rgba(16, 185, 129, 0.1);
+    --accent-primary: #2563EB;
+    --accent-hover: #1D4ED8;
+    --accent-light: rgba(37, 99, 235, 0.1);
     
-    --accent-secondary: #34D399;
+    --accent-secondary: #06B6D4;
     
-    --border-color: #E5E7EB;
-    --border-hover: #D1D5DB;     /* Zinc 700 */
+    --border-color: #E2E8F0;
+    --border-hover: #CBD5E1;     /* Zinc 700 */
     --success: #10B981;
     --error: #EF4444;
     
@@ -702,5 +702,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .ai-node-data-title { font-size: 0.85rem; font-weight: 700; color: #FAFAFA; }
 .ai-node-data-subtitle { font-size: 0.65rem; color: var(--text-tertiary); }
+
 
 
