@@ -2,23 +2,23 @@
    PREMIUM DESIGN SYSTEM & VARIABLES
 ================================================== */
 :root {
-    /* Custom Deep Pine & Gold Palette (#003631 and #FFEDA8) */
-    --bg-primary: #003631;
-    --bg-secondary: #002D29;
-    --surface: #00453F;
+    /* Custom Lavender Blush & Claret Palette */
+    --bg-primary: #FFF0F5;
+    --bg-secondary: #FCE6EE;
+    --surface: #FFFFFF;
     
-    --text-primary: #FFFFFF;
-    --text-secondary: #FFEDA8;
-    --text-tertiary: rgba(255, 255, 255, 0.6);
+    --text-primary: #7F1734;
+    --text-secondary: #9E3554;
+    --text-tertiary: #B06981;
     
-    --accent-primary: #FFEDA8;
-    --accent-hover: #E6D597;
-    --accent-light: rgba(255, 237, 168, 0.15);
+    --accent-primary: #7F1734;
+    --accent-hover: #5E0E24;
+    --accent-light: rgba(127, 23, 52, 0.1);
     
-    --accent-secondary: #FFEDA8;
+    --accent-secondary: #C73E6D; 
     
-    --border-color: rgba(255, 237, 168, 0.15);
-    --border-hover: rgba(255, 237, 168, 0.3);     /* Zinc 700 */
+    --border-color: #F0D5DF;
+    --border-hover: #E8C1CF;     /* Zinc 700 */
     --success: #10B981;
     --error: #EF4444;
     
@@ -115,11 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-large { padding: 1.125rem 2.5rem; font-size: 1.05rem; }
 
-.btn-primary {
-    background: var(--accent-primary);
-    color: var(--surface);
-    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
-}
+.btn-primary { background: var(--accent-primary); color: #FFFFFF; font-weight: 700; }
 
 .btn-primary:hover {
     background: var(--accent-hover);
@@ -153,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid transparent;
 }
 
-.navbar.scrolled { background: rgba(0, 54, 49, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); }
+.navbar.scrolled { background: rgba(255, 240, 245, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); }
 
 .nav-container {
     max-width: 1280px; margin: 0 auto; padding: 0 2rem;
@@ -201,12 +197,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-actions { display: flex; align-items: center; gap: 1.25rem; }
 
-.btn-nav {
-    padding: 0.75rem 1.5rem; font-size: 0.95rem;
-    background: var(--text-primary); color: var(--surface);
-    border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.btn-nav:hover { background: #FFFFFF; color: #003631; }
+.btn-nav { padding: 0.75rem 1.5rem; font-size: 0.95rem; background: var(--accent-primary); color: #FFFFFF; border-radius: 8px; font-weight: 700; }
+.btn-nav:hover { background: var(--accent-hover); color: #FFFFFF; }
 
 /* Hamburger */
 .hamburger {
@@ -590,7 +582,7 @@ h1, h2, h3, h4, h5, h6 {
     .section { padding: 6rem 0; }
     
     /* Navigation adjustments */
-    .nav-actions .btn-nav { padding: 0.75rem 1.5rem; font-size: 0.95rem; background: var(--accent-primary); color: #003631; border-radius: 8px; font-weight: 700; }
+    .nav-actions .btn-nav { padding: 0.75rem 1.5rem; font-size: 0.95rem; background: var(--accent-primary); color: #FFFFFF; border-radius: 8px; font-weight: 700; }
     .hamburger { display: block; }
     
     .hamburger.active span:nth-child(1) { top: 10px; transform: rotate(45deg); }
@@ -695,6 +687,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ai-node-data-title { font-size: 0.85rem; font-weight: 700; color: #FAFAFA; }
 .ai-node-data-subtitle { font-size: 0.65rem; color: var(--text-tertiary); }
+
 
 
 
