@@ -782,3 +782,26 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
+
+/* ==================================================
+   ADDITIONAL RESPONSIVENESS (MOBILE/TABLET)
+================================================== */
+@media (max-width: 768px) {
+    .challenge-box { padding: 3rem 1.5rem !important; }
+    .challenge-box h2 { font-size: 2.2rem !important; }
+    
+    .action-tabs { flex-direction: column; gap: 0.5rem; }
+    .action-tab { width: 100%; text-align: center; }
+    
+    .ui-mockup { height: auto !important; min-height: 400px; }
+    
+    .hero-title { font-size: 3rem !important; }
+    .nav-links { display: none; } /* hamburger already handles this */
+}
+
+@media (max-width: 480px) {
+    .challenge-box h2 { font-size: 1.8rem !important; }
+    .av-card-value { font-size: 1.5rem !important; }
+    .section { padding: 4rem 0 !important; }
+}
