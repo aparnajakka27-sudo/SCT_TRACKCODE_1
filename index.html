@@ -62,9 +62,8 @@
                     <!-- Dashboard HTML/CSS Mockup -->
                     <div class="ui-mockup-float">
                         <div class="ui-mockup">
-                            <div class="ui-mockup-header">
+                            <div class="ui-mockup-header" style="justify-content: flex-start;">
                                 <div class="mac-controls"><span></span><span></span><span></span></div>
-                                <div class="ui-url"><i class="fa-solid fa-lock"></i> campusflow.app/admin/dashboard</div>
                             </div>
                             <div class="ui-mockup-body">
                                 <aside class="ui-sidebar">
@@ -73,32 +72,46 @@
                                     <div class="ui-nav-item"></div>
                                     <div class="ui-nav-item mt-auto"></div>
                                 </aside>
-                                <div class="ui-main">
-                                    <header class="ui-topbar">
-                                        <div class="ui-greeting">Good morning, Alex.</div>
-                                    </header>
-                                    <div class="ui-content-grid">
-                                        <div class="ui-kpis">
-                                            <div class="ui-card">
-                                                <span class="ui-label">Total Students</span>
-                                                <span class="ui-value">842</span>
-                                                <span class="ui-trend positive">+12</span>
-                                            </div>
-                                            <div class="ui-card">
-                                                <span class="ui-label">Attendance</span>
-                                                <span class="ui-value">94.2%</span>
-                                                <span class="ui-trend neutral">~</span>
-                                            </div>
+                                <div class="ui-main" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                                        <div>
+                                            <h3 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.25rem;">Computer Science 101</h3>
+                                            <p style="font-size: 0.75rem; color: var(--text-tertiary);">Prof. Alan Turing • Fall Semester</p>
                                         </div>
-                                        <div class="ui-card ui-chart-card">
-                                            <span class="ui-label">Weekly Engagement</span>
-                                            <div class="ui-chart-bars">
-                                                <div class="ui-bar" style="--h: 60%"></div>
-                                                <div class="ui-bar" style="--h: 80%"></div>
-                                                <div class="ui-bar" style="--h: 100%"></div>
-                                                <div class="ui-bar" style="--h: 70%"></div>
-                                                <div class="ui-bar" style="--h: 90%"></div>
-                                                <div class="ui-bar" style="--h: 85%"></div>
+                                        <div style="background: rgba(16,185,129,0.1); color: #10B981; padding: 0.3rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
+                                            <div style="width: 6px; height: 6px; background: #10B981; border-radius: 50%; box-shadow: 0 0 8px #10B981;"></div> Live
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                        <div style="background: var(--bg-primary); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-color);">
+                                            <div style="font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Present</div>
+                                            <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: #FAFAFA;">42<span style="font-size: 1rem; color: var(--text-tertiary);">/45</span></div>
+                                        </div>
+                                        <div style="background: var(--bg-primary); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-color);">
+                                            <div style="font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Avg Score</div>
+                                            <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--accent-primary);">88%</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div style="background: var(--bg-primary); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-color); flex: 1;">
+                                        <div style="font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; letter-spacing: 0.5px;">Recent Submissions</div>
+                                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                                            <div style="display: flex; align-items: center; gap: 0.8rem;">
+                                                <img src="https://ui-avatars.com/api/?name=S+K&background=18181B&color=FAFAFA" style="width: 28px; height: 28px; border-radius: 50%;">
+                                                <div style="flex: 1;">
+                                                    <div style="font-size: 0.8rem; font-weight: 600;">Sarah K. submitted Lab 4</div>
+                                                    <div style="font-size: 0.65rem; color: var(--text-tertiary);">2 mins ago</div>
+                                                </div>
+                                                <i class="fa-solid fa-check" style="color: #10B981; font-size: 0.8rem;"></i>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 0.8rem;">
+                                                <img src="https://ui-avatars.com/api/?name=J+D&background=18181B&color=FAFAFA" style="width: 28px; height: 28px; border-radius: 50%;">
+                                                <div style="flex: 1;">
+                                                    <div style="font-size: 0.8rem; font-weight: 600;">James D. submitted Lab 4</div>
+                                                    <div style="font-size: 0.65rem; color: var(--text-tertiary);">15 mins ago</div>
+                                                </div>
+                                                <i class="fa-solid fa-check" style="color: #10B981; font-size: 0.8rem;"></i>
                                             </div>
                                         </div>
                                     </div>

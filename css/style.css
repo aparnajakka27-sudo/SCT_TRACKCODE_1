@@ -253,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-sm);
 }
 
-.hero-title { font-size: clamp(3rem, 5vw + 1rem, 4.75rem); margin-bottom: 1.5rem; line-height: 1.05; }
+.hero-title { font-size: clamp(2.5rem, 4vw + 1rem, 4rem); margin-bottom: 1.5rem; line-height: 1.05; }
 .hero-subtitle { font-size: 1.35rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 520px; line-height: 1.6; }
 .hero-cta-group { display: flex; gap: 1.25rem; flex-wrap: wrap; }
 
