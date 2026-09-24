@@ -393,3 +393,206 @@ if (demoForm) {
         }, 1500);
     });
 }
+
+
+const pdRoleBtns = document.querySelectorAll('.pd-role-btn');
+const pdNav = document.getElementById('pd-nav');
+const pdContentArea = document.getElementById('pd-content-area');
+const pdGreeting = document.getElementById('pd-greeting');
+const pdProfName = document.getElementById('pd-prof-name');
+const pdProfRole = document.getElementById('pd-prof-role');
+const pdAvatar = document.querySelector('.pd-avatar');
+
+const pdData = {
+    admin: {
+        name: "Alex Admin",
+        greeting: "Good morning, Alex.",
+        initials: "AA",
+        nav: [
+            { icon: "fa-solid fa-chart-pie", label: "Campus Overview", active: true },
+            { icon: "fa-solid fa-users", label: "Students" },
+            { icon: "fa-solid fa-chalkboard-user", label: "Teachers" },
+            { icon: "fa-solid fa-clipboard-check", label: "Attendance" },
+            { icon: "fa-solid fa-bullhorn", label: "Announcements" },
+            { icon: "fa-solid fa-chart-line", label: "Analytics" }
+        ],
+        html: `
+            <div class="pd-kpi-grid">
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>Total Students</span><div class="pd-kpi-icon"><i class="fa-solid fa-users"></i></div></div><div class="pd-kpi-value animate-num" data-val="2842">2,842</div><div class="pd-kpi-trend"><i class="fa-solid fa-arrow-trend-up"></i> +4.2% this month</div></div>
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>Campus Attendance</span><div class="pd-kpi-icon"><i class="fa-solid fa-clipboard-check"></i></div></div><div class="pd-kpi-value animate-num" data-val="94" data-format="%">94%</div><div class="pd-kpi-trend"><i class="fa-solid fa-arrow-trend-up"></i> +1.1% this week</div></div>
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>Active Teachers</span><div class="pd-kpi-icon"><i class="fa-solid fa-chalkboard-user"></i></div></div><div class="pd-kpi-value animate-num" data-val="145">145</div><div class="pd-kpi-trend" style="color:var(--text-tertiary)"><i class="fa-solid fa-minus"></i> No change</div></div>
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>System Alerts</span><div class="pd-kpi-icon"><i class="fa-solid fa-bell"></i></div></div><div class="pd-kpi-value animate-num" data-val="3">3</div><div class="pd-kpi-trend" style="color:#EF4444"><i class="fa-solid fa-arrow-trend-up"></i> Action Required</div></div>
+            </div>
+            <div class="pd-grid-main">
+                <div class="pd-widget">
+                    <div class="pd-widget-title"><span>Recent Activity</span><button style="background:transparent; border:none; color:var(--accent-primary); cursor:pointer; font-weight:600;">View All</button></div>
+                    <div class="pd-timeline">
+                        <div class="pd-tl-item"><div class="pd-tl-time">10:42</div><div class="pd-tl-dot"></div><div class="pd-tl-content"><div class="pd-tl-title">Semester Reports Generated</div><div class="pd-tl-desc">Automated system generated 2,842 reports.</div></div></div>
+                        <div class="pd-tl-item"><div class="pd-tl-time">09:15</div><div class="pd-tl-dot" style="background:#F59E0B"></div><div class="pd-tl-content"><div class="pd-tl-title">New Teacher Onboarded</div><div class="pd-tl-desc">Sarah Jenkins added to Science Department.</div></div></div>
+                        <div class="pd-tl-item"><div class="pd-tl-time">08:00</div><div class="pd-tl-dot" style="background:#10B981"></div><div class="pd-tl-content"><div class="pd-tl-title">Daily Backup Complete</div><div class="pd-tl-desc">Database securely backed up to cloud.</div></div></div>
+                    </div>
+                </div>
+                <div class="pd-widget">
+                    <div class="pd-widget-title"><span>Department Progress</span></div>
+                    <div class="pd-prog-item"><div class="pd-prog-header"><span>Science</span><span>88%</span></div><div class="pd-prog-bar"><div class="pd-prog-fill" style="width: 88%;"></div></div></div>
+                    <div class="pd-prog-item"><div class="pd-prog-header"><span>Mathematics</span><span>76%</span></div><div class="pd-prog-bar"><div class="pd-prog-fill" style="width: 76%;"></div></div></div>
+                    <div class="pd-prog-item"><div class="pd-prog-header"><span>Literature</span><span>92%</span></div><div class="pd-prog-bar"><div class="pd-prog-fill" style="width: 92%;"></div></div></div>
+                    <div class="pd-prog-item"><div class="pd-prog-header"><span>Arts</span><span>85%</span></div><div class="pd-prog-bar"><div class="pd-prog-fill" style="width: 85%;"></div></div></div>
+                </div>
+            </div>
+        `
+    },
+    teacher: {
+        name: "Sarah Teacher",
+        greeting: "Welcome back, Sarah.",
+        initials: "ST",
+        nav: [
+            { icon: "fa-solid fa-layer-group", label: "My Classes", active: true },
+            { icon: "fa-solid fa-clipboard-check", label: "Today's Attendance" },
+            { icon: "fa-solid fa-file-signature", label: "Assignments" },
+            { icon: "fa-solid fa-chart-line", label: "Student Progress" },
+            { icon: "fa-solid fa-bullhorn", label: "Class Announcements" },
+            { icon: "fa-solid fa-calendar", label: "Upcoming Classes" }
+        ],
+        html: `
+            <div class="pd-kpi-grid">
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>My Classes</span><div class="pd-kpi-icon"><i class="fa-solid fa-layer-group"></i></div></div><div class="pd-kpi-value animate-num" data-val="6">6</div><div class="pd-kpi-trend" style="color:var(--text-tertiary)"><i class="fa-solid fa-minus"></i> Total</div></div>
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>Pending Grades</span><div class="pd-kpi-icon"><i class="fa-solid fa-file-signature"></i></div></div><div class="pd-kpi-value animate-num" data-val="34">34</div><div class="pd-kpi-trend" style="color:#F59E0B"><i class="fa-solid fa-arrow-trend-up"></i> Due Tomorrow</div></div>
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>Avg Class Attendance</span><div class="pd-kpi-icon"><i class="fa-solid fa-clipboard-check"></i></div></div><div class="pd-kpi-value animate-num" data-val="92" data-format="%">92%</div><div class="pd-kpi-trend"><i class="fa-solid fa-arrow-trend-up"></i> +2.4% this week</div></div>
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>Messages</span><div class="pd-kpi-icon"><i class="fa-solid fa-message"></i></div></div><div class="pd-kpi-value animate-num" data-val="12">12</div><div class="pd-kpi-trend"><i class="fa-solid fa-arrow-trend-up"></i> 4 Unread</div></div>
+            </div>
+            <div class="pd-grid-main">
+                <div class="pd-widget">
+                    <div class="pd-widget-title"><span>Today's Schedule</span></div>
+                    <div class="pd-timeline">
+                        <div class="pd-tl-item"><div class="pd-tl-time">09:00</div><div class="pd-tl-dot"></div><div class="pd-tl-content"><div class="pd-tl-title">Advanced Physics (11-A)</div><div class="pd-tl-desc">Room 304 &bull; 32 Students</div></div></div>
+                        <div class="pd-tl-item"><div class="pd-tl-time">10:30</div><div class="pd-tl-dot"></div><div class="pd-tl-content"><div class="pd-tl-title">Quantum Mechanics Intro</div><div class="pd-tl-desc">Lab 2 &bull; 18 Students</div></div></div>
+                        <div class="pd-tl-item"><div class="pd-tl-time">13:00</div><div class="pd-tl-dot" style="background:#F59E0B"></div><div class="pd-tl-content"><div class="pd-tl-title">Department Meeting</div><div class="pd-tl-desc">Staff Room</div></div></div>
+                    </div>
+                </div>
+                <div class="pd-widget">
+                    <div class="pd-widget-title"><span>Quick Notes</span><button style="background:transparent; border:none; color:var(--accent-primary); cursor:pointer;"><i class="fa-solid fa-plus"></i></button></div>
+                    <div style="display:flex; flex-direction:column; gap:1rem;">
+                        <div style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color); border-left: 4px solid #F59E0B;">
+                            <div style="font-weight:700; font-size:0.85rem; color:var(--text-primary); margin-bottom:0.5rem;">Lab Equipment Request</div>
+                            <div style="font-size:0.75rem; color:var(--text-tertiary);">Need 5 more oscilloscopes for tomorrow's practical.</div>
+                        </div>
+                        <div style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color); border-left: 4px solid var(--accent-primary);">
+                            <div style="font-weight:700; font-size:0.85rem; color:var(--text-primary); margin-bottom:0.5rem;">Student Feedback</div>
+                            <div style="font-size:0.75rem; color:var(--text-tertiary);">Remember to review John's extra credit submission.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    },
+    student: {
+        name: "Emma Student",
+        greeting: "Ready to learn, Emma?",
+        initials: "ES",
+        nav: [
+            { icon: "fa-solid fa-house", label: "My Schedule", active: true },
+            { icon: "fa-solid fa-list-check", label: "Tasks" },
+            { icon: "fa-solid fa-book", label: "Courses" },
+            { icon: "fa-solid fa-clipboard-check", label: "Attendance" },
+            { icon: "fa-solid fa-chart-pie", label: "Academic Progress" },
+            { icon: "fa-solid fa-graduation-cap", label: "Upcoming Exams" },
+            { icon: "fa-solid fa-folder-open", label: "Resources" },
+            { icon: "fa-solid fa-bullseye", label: "Goals" }
+        ],
+        html: `
+            <div class="pd-kpi-grid">
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>Overall Grade</span><div class="pd-kpi-icon"><i class="fa-solid fa-star"></i></div></div><div class="pd-kpi-value">A-</div><div class="pd-kpi-trend"><i class="fa-solid fa-arrow-trend-up"></i> Top 10%</div></div>
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>Pending Tasks</span><div class="pd-kpi-icon"><i class="fa-solid fa-list-check"></i></div></div><div class="pd-kpi-value animate-num" data-val="5">5</div><div class="pd-kpi-trend" style="color:#F59E0B"><i class="fa-solid fa-clock"></i> 2 Due Today</div></div>
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>My Attendance</span><div class="pd-kpi-icon"><i class="fa-solid fa-clipboard-check"></i></div></div><div class="pd-kpi-value animate-num" data-val="98" data-format="%">98%</div><div class="pd-kpi-trend"><i class="fa-solid fa-check"></i> Perfect this month</div></div>
+                <div class="pd-kpi"><div class="pd-kpi-header"><span>Upcoming Exams</span><div class="pd-kpi-icon"><i class="fa-solid fa-graduation-cap"></i></div></div><div class="pd-kpi-value animate-num" data-val="2">2</div><div class="pd-kpi-trend" style="color:#EF4444"><i class="fa-solid fa-circle-exclamation"></i> Next in 6 days</div></div>
+            </div>
+            
+            <div class="pd-grid-main">
+                <div class="pd-widget">
+                    <div class="pd-widget-title">
+                        <span>Tasks</span>
+                        <div class="pd-task-tabs">
+                            <span class="pd-task-tab active">All</span>
+                            <span class="pd-task-tab">Today</span>
+                            <span class="pd-task-tab">This Week</span>
+                            <span class="pd-task-tab">Important</span>
+                        </div>
+                    </div>
+                    <div class="pd-task-list" id="pd-task-list">
+                        <div class="pd-task-item" onclick="this.classList.toggle('completed')">
+                            <div class="pd-checkbox"><i class="fa-solid fa-check"></i></div>
+                            <div class="pd-task-title">Complete Mathematics Assignment</div>
+                            <div class="pd-badge-high">High</div>
+                        </div>
+                        <div class="pd-task-item" onclick="this.classList.toggle('completed')">
+                            <div class="pd-checkbox"><i class="fa-solid fa-check"></i></div>
+                            <div class="pd-task-title">Physics Lab Report Draft</div>
+                            <div class="pd-badge-high">High</div>
+                        </div>
+                        <div class="pd-task-item" onclick="this.classList.toggle('completed')">
+                            <div class="pd-checkbox"><i class="fa-solid fa-check"></i></div>
+                            <div class="pd-task-title">Read Chapter 4 Biology</div>
+                            <div class="pd-badge-med">Medium</div>
+                        </div>
+                        <div class="pd-task-item" onclick="this.classList.toggle('completed')">
+                            <div class="pd-checkbox"><i class="fa-solid fa-check"></i></div>
+                            <div class="pd-task-title">History Essay Outline</div>
+                            <div class="pd-badge-med">Medium</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="pd-widget">
+                        <div class="pd-widget-title"><span>Course Progress</span></div>
+                        <div class="pd-prog-item"><div class="pd-prog-header"><span>Mathematics</span><span>75%</span></div><div class="pd-prog-bar"><div class="pd-prog-fill" style="width: 75%;"></div></div></div>
+                        <div class="pd-prog-item"><div class="pd-prog-header"><span>Physics</span><span>82%</span></div><div class="pd-prog-bar"><div class="pd-prog-fill" style="width: 82%;"></div></div></div>
+                        <div class="pd-prog-item"><div class="pd-prog-header"><span>Chemistry</span><span>65%</span></div><div class="pd-prog-bar"><div class="pd-prog-fill" style="width: 65%;"></div></div></div>
+                        <div class="pd-prog-item"><div class="pd-prog-header"><span>English Literature</span><span>90%</span></div><div class="pd-prog-bar"><div class="pd-prog-fill" style="width: 90%;"></div></div></div>
+                    </div>
+                    <div class="pd-widget">
+                        <div class="pd-widget-title"><span>Calendar</span><div style="font-size:0.75rem; color:var(--text-tertiary);"><i class="fa-solid fa-chevron-left"></i> September 2026 <i class="fa-solid fa-chevron-right"></i></div></div>
+                        <div class="pd-cal-grid">
+                            <div class="pd-cal-day">M</div><div class="pd-cal-day">T</div><div class="pd-cal-day">W</div><div class="pd-cal-day">T</div><div class="pd-cal-day">F</div><div class="pd-cal-day">S</div><div class="pd-cal-day">S</div>
+                            <div class="pd-cal-date" style="color:var(--border-hover)">30</div><div class="pd-cal-date" style="color:var(--border-hover)">31</div><div class="pd-cal-date">1</div><div class="pd-cal-date">2</div><div class="pd-cal-date">3</div><div class="pd-cal-date">4</div><div class="pd-cal-date">5</div>
+                            <div class="pd-cal-date event">6</div><div class="pd-cal-date">7</div><div class="pd-cal-date">8</div><div class="pd-cal-date event">9</div><div class="pd-cal-date">10</div><div class="pd-cal-date">11</div><div class="pd-cal-date">12</div>
+                            <div class="pd-cal-date">13</div><div class="pd-cal-date">14</div><div class="pd-cal-date">15</div><div class="pd-cal-date">16</div><div class="pd-cal-date">17</div><div class="pd-cal-date">18</div><div class="pd-cal-date">19</div>
+                            <div class="pd-cal-date event">20</div><div class="pd-cal-date">21</div><div class="pd-cal-date">22</div><div class="pd-cal-date">23</div><div class="pd-cal-date active">24</div><div class="pd-cal-date">25</div><div class="pd-cal-date">26</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+    }
+};
+
+function renderDashboard(role) {
+    if(!pdContentArea) return;
+    const data = pdData[role];
+    pdProfName.innerText = data.name;
+    pdProfRole.innerText = role.charAt(0).toUpperCase() + role.slice(1);
+    pdGreeting.innerText = data.greeting;
+    pdAvatar.innerText = data.initials;
+    
+    pdNav.innerHTML = data.nav.map(n => 
+        `<div class="pd-nav-item ${n.active ? 'active' : ''}"><i class="${n.icon}"></i> ${n.label}</div>`
+    ).join('');
+    
+    pdContentArea.style.opacity = 0;
+    setTimeout(() => {
+        pdContentArea.innerHTML = data.html;
+        pdContentArea.style.opacity = 1;
+    }, 200);
+}
+
+if(pdRoleBtns.length > 0) {
+    pdRoleBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            pdRoleBtns.forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            renderDashboard(e.target.getAttribute('data-role'));
+        });
+    });
+    renderDashboard('student');
+}
