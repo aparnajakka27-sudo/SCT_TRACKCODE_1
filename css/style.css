@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ui-mockup {
     background: var(--surface); border-radius: 16px;
-    box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,0.15);
     overflow: hidden; display: flex; flex-direction: column;
     height: 520px; 
     transform: perspective(1200px) rotateY(-10deg) rotateX(4deg) scale(0.95);
@@ -512,9 +512,9 @@ h1, h2, h3, h4, h5, h6 {
    CONTACT / CTA
 ================================================== */
 .contact-box {
-    background: var(--text-primary); border-radius: 32px; padding: 5rem;
+    background: var(--bg-secondary); border-radius: 32px; padding: 5rem; border: 1px solid var(--border-color);
     display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-    box-shadow: var(--shadow-float); color: var(--surface);
+    box-shadow: var(--shadow-float); color: var(--text-primary);
 }
 
 .contact-text .section-title { color: #FFFFFF; margin-bottom: 1.5rem; font-size: clamp(2.5rem, 4vw, 3rem); }
