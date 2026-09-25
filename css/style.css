@@ -197,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
 
-/* Premium Animated Underline (Task Requirement) */
+/* Premium Animated Underline */
 .nav-link {
     text-decoration: none; color: var(--text-secondary);
     font-weight: 600; font-size: 0.95rem;
@@ -1019,5 +1019,6 @@ html, body {
     box-shadow: 0 15px 30px rgba(8, 32, 82, 0.1) !important;
     border-color: #10B981 !important; 
 }
+
 
 
