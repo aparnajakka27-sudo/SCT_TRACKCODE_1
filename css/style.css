@@ -37,7 +37,9 @@
 }
 [data-theme="dark"] .navbar.scrolled {
     background: rgba(23, 33, 27, 0.95);
-}     /* Zinc 700 */
+} 
+:root { 
+    /* Zinc 700 */
     --success: #10B981;
     --error: #EF4444;
     
