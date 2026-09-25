@@ -20,7 +20,7 @@
 <body>
     <div class="scroll-progress-bar" id="scrollProgress"></div>
 
-    <!-- Navigation (CRITICAL TASK REQUIREMENT) -->
+    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="brand-logo">
@@ -60,103 +60,9 @@
                 </div>
                 
                 <div class="hero-visual fade-up delay-4">
-                    <!-- Dashboard HTML/CSS Mockup -->
+                    
                     <div class="ui-mockup-float">
-                        <div class="ui-mockup">
-                            <div class="ui-mockup-header" style="justify-content: flex-start;">
-                                <div class="mac-controls"><span></span><span></span><span></span></div>
-                            </div>
-                            <div class="ui-mockup-body">
-                                <aside class="ui-sidebar">
-                                    <div class="ui-nav-item active"></div>
-                                    <div class="ui-nav-item"></div>
-                                    <div class="ui-nav-item"></div>
-                                    <div class="ui-nav-item mt-auto"></div>
-                                </aside>
-                                <div class="ui-main" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; overflow: hidden;">
-                                    <!-- Top Bar -->
-                                    <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
-                                        <div style="display: flex; align-items: center; gap: 0.8rem;">
-                                            <div style="width: 32px; height: 32px; background: var(--accent-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);">
-                                                <i class="fa-solid fa-chart-line" style="color: white; font-size: 0.9rem;"></i>
-                                            </div>
-                                            <div>
-                                                <h3 style="font-family: var(--font-display); font-size: 1rem; font-weight: 700;">Campus Overview</h3>
-                                                <p style="font-size: 0.7rem; color: var(--text-tertiary);">Real-time metrics</p>
-                                            </div>
-                                        </div>
-                                                                                <div style="display: flex; gap: 0.5rem; position: relative;">
-                                            <div class="campus-search" style="position: relative;">
-                                                <input type="text" placeholder="Search students, classes..." style="padding: 0.4rem 1rem 0.4rem 2rem; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-primary); font-size: 0.7rem; color: var(--text-primary); width: 180px;">
-                                                <i class="fa-solid fa-search" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 0.7rem; color: var(--text-tertiary);"></i>
-                                                <div class="search-results" style="display: none; position: absolute; top: 110%; right: 0; width: 220px; background: var(--surface); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: var(--shadow-lg); z-index: 50; padding: 0.5rem;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <!-- Charts Row -->
-                                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                                        <!-- Area Chart (Engagement) -->
-                                        <div style="flex: 2; background: var(--bg-primary); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-color); display: flex; flex-direction: column; position: relative; overflow: hidden;">
-                                            <div style="display: flex; justify-content: space-between; align-items: flex-start; z-index: 2;">
-                                                <div>
-                                                    <div style="font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Engagement</div>
-                                                    <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: #FAFAFA;" class="animate-num" data-val="24" data-format="%">+24%</div>
-                                                </div>
-                                                <div style="color: #10B981; font-size: 0.75rem; font-weight: 700;"><i class="fa-solid fa-arrow-trend-up"></i> High</div>
-                                            </div>
-                                            <!-- SVG Area Chart -->
-                                            <svg viewBox="0 0 200 80" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; z-index: 1;" preserveAspectRatio="none">
-                                                <defs>
-                                                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="0%" stop-color="rgba(99,102,241,0.4)" />
-                                                        <stop offset="100%" stop-color="rgba(99,102,241,0)" />
-                                                    </linearGradient>
-                                                </defs>
-                                                <path d="M0,80 L0,40 Q20,30 40,50 T80,30 T120,45 T160,20 T200,10 L200,80 Z" fill="url(#chartGrad)" />
-                                                <path d="M0,40 Q20,30 40,50 T80,30 T120,45 T160,20 T200,10" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                
-                                        <!-- Radial Chart (Attendance) -->
-                                        <div style="flex: 1; background: var(--bg-primary); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
-                                            <div style="font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; position: absolute; top: 1rem; left: 1rem;">Attendance</div>
-                                            <div style="position: relative; width: 60px; height: 60px; margin-top: 1rem;">
-                                                <svg viewBox="0 0 36 36" style="width: 100%; height: 100%;">
-                                                    <path stroke="var(--border-color)" stroke-width="4" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                                    <path stroke="#10B981" stroke-width="4" stroke-dasharray="85, 100" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" style="stroke-linecap: round;" />
-                                                </svg>
-                                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-display); font-size: 0.85rem; font-weight: 800;">94%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <!-- Active Events / Tasks -->
-                                    <div style="background: var(--bg-primary); border-radius: 12px; padding: 1rem; border: 1px solid var(--border-color); flex: 1; display: flex; flex-direction: column; gap: 0.8rem;">
-                                        <div style="font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Active Events</div>
-                                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                            <div style="display: flex; align-items: center; gap: 1rem; background: var(--surface); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
-                                                <div style="width: 8px; height: 8px; background: #3B82F6; border-radius: 50%; box-shadow: 0 0 8px #3B82F6;"></div>
-                                                <div style="flex: 1;">
-                                                    <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Midterm Registration</div>
-                                                    <div style="font-size: 0.65rem; color: var(--text-tertiary);">Closes in 2 days</div>
-                                                </div>
-                                                <div style="background: rgba(59,130,246,0.1); color: #60A5FA; padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.65rem; font-weight: 700;">Action Required</div>
-                                            </div>
-                                            <div style="display: flex; align-items: center; gap: 1rem; background: var(--surface); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
-                                                <div style="width: 8px; height: 8px; background: #F59E0B; border-radius: 50%; box-shadow: 0 0 8px #F59E0B;"></div>
-                                                <div style="flex: 1;">
-                                                    <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">System Maintenance</div>
-                                                    <div style="font-size: 0.65rem; color: var(--text-tertiary);">Saturday, 2AM EST</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Ambient background glow behind mockup -->
+                        <img src="assets/images/hero-dashboard.png" alt="CampusFlow Dashboard Overview" style="width: 100%; height: auto; display: block; margin: 0 auto; object-fit: contain;"></div><!-- Ambient background glow behind mockup -->
                     <div class="hero-glow"></div>
                 </div>
             </div>
@@ -325,7 +231,7 @@
                         </div>
                     </div>
                     
-                    <!-- Added to fill grid -->
+                    
                     <div class="bento-item fade-up delay-1">
                         <div class="bento-content">
                             <div class="bento-icon"><i class="fa-solid fa-mobile-screen"></i></div>
@@ -334,7 +240,7 @@
                         </div>
                     </div>
 
-                    <!-- Added to fill grid -->
+                    
                     <div class="bento-item fade-up delay-2">
                         <div class="bento-content">
                             <div class="bento-icon"><i class="fa-solid fa-shield-halved"></i></div>
@@ -607,6 +513,8 @@
     <script type="module" src="./js/script.js"></script>
 </body>
 </html>
+
+
 
 
 
