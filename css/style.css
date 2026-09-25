@@ -919,7 +919,7 @@ html, body {
 @media (max-width: 1024px) {
     .premium-dashboard { flex-direction: column; height: auto; }
     .pd-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border-color); padding: 1.5rem; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-    .pd-nav { flex-direction: row; overflow-x: auto; width: 100%; order: 3; margin-top: 1rem; padding-bottom: 0.5rem; }
+    .pd-nav { flex: none; width: 100%; flex-direction: row; overflow-x: auto; order: 3; margin-top: 1rem; padding-bottom: 0.5rem; }
     .pd-nav-item { white-space: nowrap; }
     .pd-quick-actions { display: none; }
     .pd-sidebar-profile { margin-top: 0; padding-top: 0; border: none; }
